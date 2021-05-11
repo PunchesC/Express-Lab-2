@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pizza Receipt</title>
 </head>
+
 <body>
   <h1>Here is your Order!</h1>
   <p>Size:</p>{{size}}
   <p>Toppings:</p>{{toppingAmount}}
   <p>Gluten-Free:</p>{{gluten}}
   <p>Special Instructions</p>{{instructionBox}}
-  {{#if }}
-  <p>Price: {{smallPizza}}</p>
-{{else if size.option.Medium}} 
-<p>Price: {{mediumPizza}}</p>
-{{else if size.option.Large}}
-  <p>Price: {{largePizza}}</p>
-{{/if}}
+  <p>Price: ${{displayPrice}}</p>
 
- <a href="/">Back Home</a>
+
+  <a href="/">Back Home</a>
 </body>
+
 </html>

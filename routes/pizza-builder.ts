@@ -14,12 +14,18 @@ routes.get("/pizza-builder-results", (req,res)=>{
   const toppingAmount = parseInt(req.query.toppingAmount as string);
   const gluten = !!req.query.gluten;
   const instructionBox = req.query.instructionBox;
-  const smallPizza = (7+toppingAmount*.50);
-  const mediumPizza = (10+toppingAmount*1.00);
-  const largePizza = (12+toppingAmount*1.25);
-  const freeDelivery = 
+  let price = 0;
+  if (size=== "Small"){ price = (7+toppingAmount*.50)}
+  else if(size==="Medium"){ price = (10+toppingAmount*1.00)}
+  else{price = (12+toppingAmount*1.25)}
+  if (gluten){
+    
+  }
+  let displayPrice = price.toFixed(2);
+ 
+
   
-  res.render('pizza-builder-results', {size , toppingAmount, gluten, instructionBox, smallPizza, mediumPizza,largePizza})
+  res.render('pizza-builder-results', {size , toppingAmount, gluten, instructionBox,displayPrice})
 });
 
 export default routes;
