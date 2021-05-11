@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Builder</title>
+</head>
+
+  <h1>Pizza Builder</h1>
+  <form action="/pizza-builder-results" method= "get">
+    <label for="size">Size:</label>
+    <select name="size" id="size">
+      <option>Large</option>
+      <option>Medium</option>
+      <option>Small</option>
+    </select>
+    <label for="toppingAmount"> How many Toppings?</label>
+    <input type="number" name="toppingAmount"></input>
+    {{!-- <ul>{{#each toppingsArray}}
+      <li>{{this}}</li>
+      {{/each}}
+    </ul> --}}
+    <label for="gluten">Gluten-Free Crust?($2.00 extra)</label>
+    <input type="checkbox" name="gluten" value="false"></input>
+    <label for="instructionBox">Special Instructions (Optional)</label>
+    <textarea id="textarea" name="instructionBox" placeholder="Please leave any special instructions...."></textarea>
+    <p>
+     <button type="submit">This way to checkout!</button>
+   </p>
+
+
+
+
+  </form>
+  
+</body>
+</html>

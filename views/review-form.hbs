@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Page</title>
+</head>
+<body>
+  <h1>Leave a Review</h1>
+  <form action="/review-results" method= "get">
+   <p>
+     <label for="name">Your Name:</label>
+     <input id="nameInput" name="name" />
+   </p>
+   <p>
+     <label for="comment">Comment Here:</label>
+     <input id="commentInput" name="comment" />
+   </p>
+
+    <p>
+     <input type="radio" id="radioFive" name="rating" value="5" />
+     <label for="radioFive">5 (Best)</label>
+     <input type="radio" id="radioFour" name="rating" value="4"/>
+     <label for="radioFour">4 </label>
+     <input type="radio" id="radioThree" name="rating" value="3"/>
+     <label for="radioThree">3 </label>
+     <input type="radio" id="radioTwo" name="rating" value="2"/>
+     <label for="radioTwo">2</label>
+      <input type="radio" id="radioOne" name="rating" value="1"/>
+     <label for="radioOne">1 (Worst)</label>
+   </p>
+   <p>
+     <button type="submit">Thanks for leaving a review!</button>
+   </p>
+
+
+ </form>
+
+
+  <a href="/">Back Home</a>
+</body>
+</html>
