@@ -17,10 +17,16 @@
     </select>
     <label for="toppingAmount"> How many Toppings?</label>
     <input type="number" name="toppingAmount"></input>
-    {{!-- <ul>{{#each toppingsArray}}
+        <ul>
+    {{#each array}}
       <li>{{this}}</li>
-      {{/each}}
-    </ul> --}}
+    {{/each}}
+  </ul>
+
+
+  
+ 
+ 
     <label for="gluten">Gluten-Free Crust?($2.00 extra)</label>
     <input type="checkbox" name="gluten" value="false"></input>
     <label for="instructionBox">Special Instructions (Optional)</label>
@@ -28,7 +34,13 @@
     <p>
      <button type="submit">This way to checkout!</button>
    </p>
-
+    
+     <ol>
+    {{#each toppingsArray}}
+      <li>{{this}}</li>
+    {{/each}}
+  </ol>
+  
 
 
 

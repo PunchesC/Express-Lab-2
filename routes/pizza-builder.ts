@@ -2,12 +2,11 @@ import express from 'express';
 
 const routes = express.Router();
 
-// let toppingsArray=[
-//   "Ham" , "Sausage" , "Oyster" , "Onion", "Pineapple", "Green Peppers"
-// ];
+
 routes.get('/pizza-builder', (req,res)=>{
-  // const toppingsArray = req.query.toppingsArray
-  res.render('pizza-builder' );
+  const array =["Ham", "Sausage", "Oyster", "Onion", "Pineapple", "Green Peppers"];
+  
+  res.render('pizza-builder', {array} );
 });
 
 routes.get("/pizza-builder-results", (req,res)=>{
@@ -18,6 +17,8 @@ routes.get("/pizza-builder-results", (req,res)=>{
   const smallPizza = (7+toppingAmount*.50);
   const mediumPizza = (10+toppingAmount*1.00);
   const largePizza = (12+toppingAmount*1.25);
+  const freeDelivery = 
+  
   res.render('pizza-builder-results', {size , toppingAmount, gluten, instructionBox, smallPizza, mediumPizza,largePizza})
 });
 
